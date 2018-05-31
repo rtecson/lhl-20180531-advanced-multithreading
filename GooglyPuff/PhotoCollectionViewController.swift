@@ -124,7 +124,7 @@ private extension PhotoCollectionViewController {
 // MARK: - Notification handlers
 extension PhotoCollectionViewController {
     
-    func contentChangedNotification(_ notification: Notification!) {
+    @objc func contentChangedNotification(_ notification: Notification!) {
         collectionView?.reloadData()
         showOrHideNavPrompt()
     }

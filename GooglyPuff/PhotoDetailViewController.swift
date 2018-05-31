@@ -46,7 +46,7 @@ class PhotoDetailViewController: UIViewController {
         
         // Create new image (with googly eyes) from original image
         let overlayImage = faceOverlayImageFromImage(image)
-        
+
         // Fade in the new image over the original image
         fadeInNewImage(overlayImage)
         
@@ -72,7 +72,7 @@ private extension PhotoDetailViewController {
         
         // Get features from the image
         let newImage = CIImage(cgImage: image.cgImage!)
-        let features = detector?.features(in: newImage) as! [CIFaceFeature]!
+        let features = detector?.features(in: newImage) as! [CIFaceFeature]?
         
         UIGraphicsBeginImageContext(image.size)
         let imageRect = CGRect(x: 0, y: 0, width: image.size.width, height: image.size.height)

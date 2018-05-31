@@ -70,7 +70,7 @@ class AssetsCollectionViewController: UICollectionViewController {
   }
   
   // MARK: - Button handlers
-  func donePressed(_ sender: UIBarButtonItem) {
+  @objc func donePressed(_ sender: UIBarButtonItem) {
     assetPickerDelegate?.assetPickerDidFinishPickingAssets(selectedAssets.assets)
   }
   
